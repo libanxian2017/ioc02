@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans profile="dev">
+    <bean class="com.centit.ioc.DateSource" id="devDs">
+        <property name="username" value="1111111111"/>
+        <property name="password" value="11111111111111"/>
+        <property name="url" value="1111111111111111"/>
+    </bean>
+</beans>
+    <beans profile="prod">
+    <bean class="com.centit.ioc.DateSource" id="prodDs">
+        <property name="username" value="root"/>
+        <property name="password" value="45343444"/>
+        <property name="url" value="jdbc:mysql://198.167.137.1:3306/dev"/>
+    </bean>
+</beans>
+</beans>
